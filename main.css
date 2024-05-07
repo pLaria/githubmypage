@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+  
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+  
+body {
+    background-color: rgb(95, 95, 95);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    padding-bottom: 4.5rem;
+    min-height: 100vh;
+    min-width: 50vh;
+}
+  
+.logo{
+    width: 13rem;
+    height: 5rem;
+    
+}
+ 
+nav{
+    border-bottom: 4px solid rgb(255, 255, 255);
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    min-height:8vh;
+    background-color: #294674;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+}
+    
+.ham span{
+    background-color: #f3f3f3;
+    display:block;
+    height:3px;
+    width: 28px;
+    margin:10px auto;
+    border-radius:2px;    
+}
+.enlaces-menu{
+    display:flex;
+    padding:0;
+}
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style-type: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a{
+    text-decoration:none;
+    font-size: 2.2rem;
+    color:#f3f3f3;
+    font-weight:600;
+}
+.enlaces-menu li:hover{
+    background-color:rgb(62, 130, 197);
+}
+
+/* DISPOSITIVOS MOVILES */
+
+@media (max-width:1013px) {
+    
+    body{
+        text-align: center;
+        overflow:hidden;
+    }
+    .ham{
+        display:block;
+        cursor:pointer;
+        position: absolute; 
+        top:15px;
+        right:25px;
+        transition: 0.2s  0.1s; 
+    }
+    nav{
+        flex-direction:column;
+        align-items: flex-start;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .logo{
+        margin-left: 18vh;
+
+    }
+    .enlaces-menu{
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+        height: 92vh;         
+        margin:0;
+        padding:0; 
+        display:none;
+        opacity:0;
+        transition: opacity 5s ease-out;
+        width:100%;
+    }
+    .enlaces-menu li{
+        text-align:center;
+        width:100%;
+        padding:20px;    
+    }
+    .iframe{
+        height:113px;
+    }
+}
+
+/* Animaciones */
+  
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.enlaces-menu.activado{
+    display:flex; 
+    animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+}
+.br-2.animado{
+    opacity: 0;
+}
+.br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.ham.girar:hover{
+    transform: rotate(360deg);
+}
+
+
+/* Cuerpo */
+
+form{
+    flex: 1;
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 2vh;
+    padding-right: 1vh;
+}
+h1{
+    color: #294674;
+    font-size: 4rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+}
+h2{
+    color: #334a70;
+    font-size: 3rem;
+    margin-top: 0rem;
+    margin-bottom: 0.15rem;
+}
+p{
+    margin: 0;
+    color: #ffffff;
+    font-size: 2rem;
+}
+.btnCV{
+    --button_radius: 0.85em;
+    background-color: rgb(62, 130, 197);
+    font-size: 2.5rem;
+    border: none;
+    border-radius: var(--button_radius);
+    box-shadow: #d11caa;
+    margin-bottom: 7rem;
+    box-sizing: border-box;
+    transform: scale(1vh);
+    margin-top: 7rem;
+    
+}
+.btnCV:hover{
+    box-shadow: -7px 7px #2a4775;
+    transition: .1s;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* logs tecnologias */
+
+div{
+    margin-top: 7rem;
+    margin-left: 5rem;
+    margin-right: 4rem;
+    text-align: center;
+}
+.log_lengua{
+    box-sizing: border-box;
+    --button_radius: 0.85em;
+    border-radius: var(--button_radius);
+    background-color:#294674;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 1.35rem;
+    width: 17rem;
+    height: 17rem;  
+}
+
+#whatsapp{
+    position: fixed;
+    bottom: 5px;
+    right:5px;
+}
+
+svg{
+    width: 80px;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+}
+
+circle {
+    fill: #25d366;
+}
+
+path{
+    fill: #fff;
+}
+/* contactos */
+
+.gif{
+    padding-left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    --button_radius: 1.85em;
+    border-radius: var(--button_radius);
+    width: 7rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+iframe{
+    min-width: 100%;
+    min-height: 14%;
+    height:130px;
+}
+
+/* pie de pagina */
+
+footer{
+    border-top: 4px solid rgb(255, 255, 255);
+    background-color: #294674;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 98.vw;    
+}
+.pfooter{
+    
+    font-size:1rem;
+    padding: 0;
+}
+
+.etfooter{
+    padding: 0;
+    width: 9rem;
+    height: 2.5rem;
+}
+
+.perfil{
+    margin-right: 6rem;
+    float: right;
+    height: 24rem;
+    background: rgb(236,236,236);
+    background: radial-gradient(circle, rgba(255,255,255,1) 21%, rgba(95,95,95,0.95) 70%);
+}
+.contenedor{
+    
+    display: block;
+    
+}
+#perfil{
+    background-color: #25d366;
+    margin: 0;
+    text-align: initial;
+    width: rem;
+}
+
+/* Proyectos */
+
+.pPlantillas{
+    text-align: center;
+    background-image: url(Plantilla1.PNG);
+    padding-top: 5vh ;
+    padding-bottom: 5vh ;
+    padding-left: 1vh ;
+    padding-right: 1vh ;
+    margin-top: 6vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    background-size: cover;
+    font-size: 10vh;
+    color:chartreuse;
+}
+.pPlantillas:hover{
+        color: #2a4775;
+}
+
+
+/* Estilos para la sección de proyecto */
+.proyecto {
+    
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.proyecto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.proyecto-imagen {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.proyecto a {
+    color: #3498db; /* Cambia el color según tu preferencia */
+    text-decoration: none;
+}
+
+.proyecto a:hover {
+    text-decoration: underline;
+}
