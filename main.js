@@ -11,3 +11,22 @@ ham.addEventListener('click', () => {
 window.addEventListener('load',() =>{
     this.document.getElementById('loader').classList.toggle('loader2')
 })
+// Agrega desplazamiento suave cuando se hace clic en un enlace del menú
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene el comportamiento predeterminado
+
+        const targetId = this.getAttribute('href'); // Obtiene el ID del destino
+        const targetSection = document.querySelector(targetId); // Busca la sección con ese ID
+
+        // Realiza el desplazamiento suave
+        window.scrollTo({
+            top: targetSection.offsetTop, // Desplaza hacia la posición de la sección
+            behavior: 'smooth' // Animación suave
+        });
+
+        // Cierra el menú de hamburguesa después del clic
+        var menu = document.getElementById("menu");
+        menu.classList.remove("show");
+    });
+});
