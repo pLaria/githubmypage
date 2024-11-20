@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8SDGT3B7G"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,17 +11,21 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnologías - Laria Software</title>
+    <title>Laria Software</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
+    <!-- Contenedor para partículas -->
+    <div id="particles-js"></div>
+    
     <header>
         <nav>
             <a href="index.html"><img class="logo" src="logo.png" alt="logo"></a>
             <ul class="enlaces-menu">    
                 <li> <a href="index.html">Leonardo</a></li>
-                <li> <a href="tecnologias.html" class="active">Tecnologías</a></li>
+                <li> <a href="tecnologias.html">Tecnologias</a></li>
                 <li> <a href="proyectos.html">Proyectos</a></li>
                 <li> <a href="experiencia.html">Experiencia</a></li>
                 <li> <a href="contactos.html">Contactos</a></li>
@@ -32,25 +37,28 @@
             </button>                       
         </nav>
     </header>
-
-    <main>
-        <h1>Tecnologías</h1>
-        <p>Explora las herramientas y lenguajes que utilizo para desarrollar soluciones innovadoras.</p>
-        <ul>
-            <li>HTML5, CSS3, JavaScript</li>
-            <li>PHP, MySQL</li>
-            <li>Frameworks: Angular, React</li>
-            <li>Herramientas: Git, Docker</li>
-        </ul>
-    </main>
+    <div>
+        <a href="https://api.whatsapp.com/send/?phone=3564330311"><img class="gif" src="gif whatsapp.gif" alt=""></a>
+        <a href="https://www.instagram.com/leonardo_laria/"><img class="gif" src="gif instagram.gif" alt=""></a>
+        <a href="https://www.facebook.com/leo.laria/"><img class="gif" src="gif facebook.gif" alt=""></a>
+        <a href="mailto:leonardogabriellaria@gmail.com?subject=Portfolio+visita"><img class="gif" src="gif gmail.gif" alt=""></a>
+        <a href="https://www.linkedin.com/in/leonardo-grabriel-laria-91a6a1240/"><img class="gif" src="gif linkedin.gif" alt=""></a>
+        <a href="https://github.com/pLaria"><img class="gif" src="gif github.gif" alt=""></a>
+    </div>
     
-    <script src="main.js"></script>
     <footer>
-        <iframe class="iframe" src="https://www.instagram.com/leonardo_laria/embed" frameborder="0" scrolling="no"></iframe>
-        <p class="pfooter">ESTE SITIO ESTÁ DESARROLLADO CON:</p>
-        <img class="etfooter" src="et html5.PNG" alt="HTML5">
-        <img class="etfooter" src="et css3.PNG" alt="CSS3">
-        <img class="etfooter" src="et js.PNG" alt="JavaScript">
+        <iframe class="iframe" src="https://www.instagram.com/leonardo_laria/embed" frameborder="0" scrolling="no" allowtransparency=""></iframe>
+        <p class="pfooter">ESTE SITIO ESTA DESARROLLADO CON:</p>
+        <img class="etfooter" src="et html5.PNG" alt="html5">
+        <img class="etfooter" src="et css3.PNG" alt="html5">
+        <img class="etfooter" src="et js.PNG" alt="html5">
     </footer>
+
+    <!-- Script para inicializar partículas -->
+    <script>
+        particlesJS.load('particles-js', 'particles-config.json', function() {
+            console.log('Partículas cargadas correctamente');
+        });
+    </script>
 </body>
 </html>
