@@ -285,8 +285,6 @@ footer{
     margin-right: 6rem;
     float: right;
     height: 24rem;
-    background: rgb(236,236,236);
-    background: radial-gradient(circle, rgba(255,255,255,1) 21%, rgba(95,95,95,0.95) 70%);
 }
 .contenedor{
     
