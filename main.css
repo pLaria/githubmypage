@@ -200,13 +200,14 @@ a{
     color: black;
 }
 
-/* logs tecnologias */
+/* logs tecnologias 
 
 div{
     margin-top: 7rem;
     margin-right: 4rem;
     text-align: center;
 }
+*/
 .log_lengua{
     box-sizing: border-box;
     --button_radius: 0.85em;
